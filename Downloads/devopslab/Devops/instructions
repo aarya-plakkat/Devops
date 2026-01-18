@@ -1,0 +1,83 @@
+commands
+
+firstprog
+sudo docker build -t firstprg .
+sudo docker run -d firstprg
+docker ps -a
+
+secondprogram
+sudo docker build -t secprg .
+sudo docker run  -p 3000:3000 secprg
+open localhost:3000
+
+third
+sudo docker build -t thirdprg .
+sudo docker run  -p 3001:3001 thirdprg
+open localhost:3001
+
+seventh prog
+kubectl apply -f nginx-deployment.yaml
+kubectl get deployments
+kubectl get pods
+kubectl expose deployment nginx-deployment --type=NodePort --port=80
+kubectl get services
+minikube service nginx-deployment
+
+eight prog
+kubectl apply -f nodejs-configmap.yaml
+kubectl apply -f nodejs-pod.yaml
+kubectl get pods
+kubectl port-forward pod/program-8 3000:3000
+open http://localhost:3000/
+
+prog9
+minikube start
+
+
+kubectl apply -f namespaces.yaml
+
+kubectl apply -f pods.yaml
+
+kubectl get pods -n dev
+
+kubectl get pods -n prod
+
+kubectl get pods -n dev -l app=frontend
+
+kubectl get pods -n prod -l app=backend
+
+kubectl delete pods --all -n dev
+
+kubectl delete pods --all -n prod
+
+kubectl delete namespace dev
+
+kubectl delete namespace prod
+
+prog 10
+minikube start --cpus=2 --memory=4096
+
+minikube dashboard
+
+
+kubectl apply -f deployment.yaml
+
+kubectl apply -f service.yaml
+
+kubectl get pods
+
+kubectl get pods
+
+kubectl get svc
+
+kubectl logs <pod-name>
+
+kubectl describe pod <pod-name>
+
+minikube service nginx-service
+
+kubectl delete svc --all
+
+kubectl delete deployments --all
+
+
